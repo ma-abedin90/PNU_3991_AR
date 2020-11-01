@@ -33,7 +33,7 @@
   <tr>
     <th ></th>
     <th ></th>
-    <th><a href="https://github.com/ma-abedin90/PNU_3991/tree/master/Theory-of-Languages-and-Machines" >نظريه زبانهاوماشين ها 01-1115157</a></th>
+    <th><a href="https://github.com/ma-abedin90/PNU_3991/tree/main/Theory-of-Languages-and-Machines" >نظريه زبانهاوماشين ها 01-1115157</a></th>
     <th></th>
     <th></th>
     <th>شنبه</th>
@@ -49,7 +49,7 @@
    <tr>
      <th ></th>
      <th ></th>
-     <th><a href="https://github.com/ma-abedin90/PNU_3991/tree/master/Theory-of-Languages-and-Machines" >نظريه زبانهاوماشين ها 01-1115157</a></th>
+     <th><a href="https://github.com/ma-abedin90/PNU_3991/tree/main/Theory-of-Languages-and-Machines" >نظريه زبانهاوماشين ها 01-1115157</a></th>
     <th></th>
     <th></th>   
     <th>دوشنبه</th>
