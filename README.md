@@ -15,6 +15,8 @@
 
 - [حساب گیت هاب](https://github.com/ma-abedin90/)
 
+- [پروژه های نوشتاری لاتک درس نظریه زبانها و ماشین ها](https://github.com/ma-abedin90/PNU_3991_AR/tree/main/Theory-of-Languages-and-Machines/LaTeX_Works)
+
 ------------------
 > ارزیابی ها
 
