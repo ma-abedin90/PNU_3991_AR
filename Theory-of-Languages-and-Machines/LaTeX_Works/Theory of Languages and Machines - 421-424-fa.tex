@@ -1,0 +1,467 @@
+\documentclass[]{article}
+\usepackage[a4paper,bindingoffset=0.2in,%
+left=1in,right=1in,top=1in,bottom=1in,%
+footskip=.25in]{geometry}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\date{}
+\usepackage{xepersian}
+\settextfont{BZar}
+
+\begin{document}
+
+
+\begin{center}
+بسمه تعالی
+\end{center}
+
+
+اگر بخواهیم یک ماشین پشته ای طراحی کنیم که وقتی پشته خالی است پذیرفته شود، تابع $\lambda$ برابر بصورت زیر می باشد:
+
+\begin{center}
+\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{1},$\lambda$)}
+\end{center}
+
+اگر بخواهیم ماشین پشته ای طراحی کنیم که در حالت نهایی پذیرفته شود تابع $\lambda$ بصورت زیر خواهد شد:
+
+\begin{center}
+\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{f}, $\lambda$)}
+\end{center}
+
+11. یک ماشین پشته ای غیر قطعی طراحی کنید که زبانی را که گرامر روبرو تولید می کند تولید کند. پس از طراحی رشته \lr{abcba} را روی ماشین آزمایش کنید که پذیرفته می شود یا خیر.
+
+حل: قوانین ضرب در حالت فرم نرمال گریباخ نمی باشند پس اولین کاری که باید انجام دهیم تبدیل آنها به فرم نرمال گریباخ می باشد.
+
+\begin{center}
+\lr{S → aSa \textbar{} bSb \textbar{} c}
+\end{center}
+
+دو قانون جدید را در نظر می گیریم
+\begin{center}
+\lr{C\textsubscript{a} → a , C\textsubscript{b} → b}
+\end{center}
+
+قوانین جدید بصورت زیر خواهند شد:
+\begin{center}
+\lr{S → aSC\textsubscript{a}}
+\lr{S → bSC\textsubscript{b}}
+\lr{S → c}
+\lr{C\textsubscript{a} → a}
+\lr{C\textsubscript{b} → b}
+\end{center}
+
+حال تمامی قوانین بصورت فرم نرمال گریباخ می باشند. حال با استفاده از قوانین بالا براحتی می توانیم ماشین پشته ای قطعی را بسازیم.
+ابتدا علامت شروع که همان \lr{S} است را درون پشته قرار می دهیم با استفاده از قانون زیر
+\begin{center}
+\lr{$\delta$(q\textsubscript{0}, $\epsilon$, z\textsubscript{0}) → (q\textsubscript{1},Sz\textsubscript{0})}
+\end{center}
+
+سپس برای قانون \lr{S → aSC\textsubscript{a} } تابع انتقال زیر را انجام می دهیم:
+
+\begin{center}
+\lr{$\delta$(q\textsubscript{1}, a, S) → (q\textsubscript{1}, SC\textsubscript{a})}
+\end{center}
+
+برای قانون \lr{S → bSC\textsubscript{b} } تابع انتقال زیر را داریم:
+\begin{center}
+\lr{$\delta$(q\textsubscript{1},b,S) → (q\textsubscript{1}, SC\textsubscript{b})}
+\end{center}
+
+برای قانون \lr{ S → c} تابع انتقال زیر را داریم:
+
+\begin{center}
+\lr{$\delta$(q\textsubscript{1}, c, S) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+
+برای قانون \lr{ C\textsubscript{a} → a} تابع انتقال زیر را داریم:
+
+\begin{center}
+\lr{$\delta$(q\textsubscript{1}, a, C\textsubscript{a}) → (q\textsubscript{1},Sz\textsubscript{0})}
+\end{center}
+
+برای قانون \lr{ C\textsubscript{b} → b} تابع انتقال زیر را داریم:
+\begin{center}
+\lr{$\delta$(q\textsubscript{1}, b, C\textsubscript{b}) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+
+برای حالت های پایانی نیزتابع انتقال زیر را خواهیم داشت:
+\begin{center}
+\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{f},z\textsubscript{0})}
+\end{center}
+
+که با حالت پایانی پذیرفته می شود
+\begin{center}
+\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+که با حالت پشته خالی پذیرفته می شود
+
+برای رشته \lr{ abcba} نیز خواهیم داشت:
+
+\begin{flushleft}
+\lr{$\delta$(q\textsubscript{0}, \underline{$\epsilon$}abcba, z\textsubscript{0}) → $\delta$(q\textsubscript{1},\emph{a}bcba, Sz\textsubscript{0}) → $\delta$(q\textsubscript{1}, a\underline{b}cba, SC\textsubscript{a}z\textsubscript{0}) → $\delta$(q\textsubscript{1}, ab\underline{c}ba, SC\textsubscript{b}C\textsubscript{a}z\textsubscript{0}) → $\delta$(q\textsubscript{1}, abc\underline{b}a, C\textsubscript{b}C\textsubscript{a}z\textsubscript{0}) → $\delta$(q\textsubscript{1}, abcb\underline{a}, C\textsubscript{a}z\textsubscript{0}) → $\delta$(q\textsubscript{1}, abcbaB, z\textsubscript{0}) → (q\textsubscript{f}, z\textsubscript{0})}
+\end{flushleft}
+حالت پذیرش پایانی
+
+
+
+12. یک ماشین پشته ای قطعی طراحی کنید که معادل گرامر مستقل از متن زیر باشد:
+
+\begin{center}
+\lr{S → 0BB, B → 0S \textbar{} 1S \textbar{} 0}
+\end{center}
+
+همچنین آزمایش کنید که آیا رشته \lr{010000} در ماشین بالا پذیرفته می شود یا خیر
+
+گرامر مستقل از متن معادل عبارت انداز
+
+\begin{center}
+\lr{S → 0BB, B → 0S \textbar{} 1S \textbar{} 0}
+\end{center}
+
+که تمامی قوانین به فرم نرمال گریباخ باشد
+ابتدا علامت شروع که همان \lr{S} است را درون پشته قرار می دهیم با استفاده از قانون زیر
+
+\begin{center}
+\lr{$\delta$(q\textsubscript{0}, $\epsilon$, z\textsubscript{0}) → (q\textsubscript{1}, Sz\textsubscript{0})}
+\end{center}
+
+سپس برای قانون  \lr{S → 0BB}  تابع انتقال زیر را انجام می دهیم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 0, S) → (q\textsubscript{1}, BB)}
+\end{center}
+
+برای قانون \lr{ B → 0S} تابع انتقال زیر را داریم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 0, B) → (q\textsubscript{1}, S)}
+\end{center}
+
+برای قانون \lr{ B → 1S} تابع انتقال زیر را داریم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 1, B) → (q\textsubscript{1}, S)}
+\end{center}
+
+برای قانون \lr{ B → 0} تابع انتقال زیر را داریم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 0, B) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+
+برای حالت های پایانی نیز تابع انتقال زیر را خواهیم داشت:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{f},z\textsubscript{0})}
+\end{center}
+		
+که با حالت پایانی پذیرفته می شود
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+که با حالت پشته خالی پذیرفته می شود
+
+همچنین برای رشته \lr{010000} خواهیم داشت:
+
+\begin{flushleft}
+	\lr{ (q\textsubscript{0}, \underline{$\epsilon$}10000, z\textsubscript{0}) → (q\textsubscript{1},\underline{0}10000, Sz\textsubscript{0}) → (q\textsubscript{1}, 0\underline{1}0000, BBz\textsubscript{0}) → (q\textsubscript{1}, 01\underline{0}000, SBz\textsubscript{0}) → (q\textsubscript{1}, 010\underline{0}00, BBBz\textsubscript{0}) → (q\textsubscript{1}, 0100\underline{0}0, BBz\textsubscript{0}) → (q\textsubscript{1}, 01000\underline{0}, Bz\textsubscript{0}) → (q\textsubscript{1}, 010000$\epsilon$, z\textsubscript{0}) → (q\textsubscript{f},010000$\epsilon$, z\textsubscript{0})}
+\end{flushleft}
+حالت پایانی پذیرش
+
+
+
+13. نشان دهید که زبان
+\begin{center}
+	\lr{L = \{0\textsuperscript{n}1\textsuperscript{n} \textbar{} n \underline{\textgreater{}} 1\} $\bigcup$ \{0\textsuperscript{n}1\textsuperscript{2n} \textbar{} n \underline{\textgreater{}} 1\} }
+\end{center}
+
+که یک زبان مستقل از متن می باشد با یک ماشین پشته ای قطعی پذیرفته می شود.
+
+حل: گرامر مستقل از متن برای زبان فوق عبارت انداز:
+
+\begin{center}
+	\lr{S → S\textsubscript{1} \textbar{} S\textsubscript{2}}
+\end{center}
+\begin{center}
+	\lr{S\textsubscript{1} → 0S\textsubscript{1}1 \textbar{} 01}
+\end{center}
+\begin{center}
+	\lr{S\textsubscript{2} → 0S\textsubscript{2}11 \textbar{} 011}
+\end{center}
+
+فرم نرمال گریباخ معادل آن نیز عبارت انداز:
+
+\begin{center}
+	\lr{S → 0S\textsubscript{1}A \textbar{} 0A \textbar{} 0S\textsubscript{2}A \textbar{} 0AA }
+\end{center}
+\begin{center}
+	\lr{A → 1}
+\end{center}
+
+تابع انتقال ماشین پشته ای معادل با گرامر نیز عبارت انداز:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{0}, $\epsilon$, z\textsubscript{0}) → (q\textsubscript{1},Sz\textsubscript{0})}
+\end{center}
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 0, S) → (q\textsubscript{1}, S\textsubscript{1}A)}
+\end{center}
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 0, S) → (q\textsubscript{1}, A)}
+\end{center}
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 0, S) → (q\textsubscript{1}, S\textsubscript{2}A)}
+\end{center}
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 0, S) → (q\textsubscript{1}, AA)}
+\end{center}
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, 1, A) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{f}, z\textsubscript{0})}
+\end{center}
+
+با حالت پایانی پذیرفته می شود
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+با پشته خالی پذیرفته می شود
+
+ماشین پشته ای یک ماشین پشته ای غیر قطعی می باشد که برای ترکیب\lr{ (q\textsubscript{1}, 0, S)} چهار تابع انتقال وجود دارد.
+
+
+
+14. گرامر مستقل از متن زیر را به یک ماشین پشته ای تبدیل کنید:
+
+\begin{center}
+	\lr{S → aAA}
+\end{center}
+\begin{center}
+	\lr{A → aS \textbar{} bS \textbar{} a}
+\end{center}
+
+حل: گرامر در فرم نرمال گریباخ می باشد.
+
+ابتدا علامت شروع که همان \lr{S} است را درون پشته قرار می دهیم با استفاده از قانون زیر
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{0}, $\epsilon$, z\textsubscript{0}) → (q\textsubscript{1}, Sz\textsubscript{0})}
+\end{center}
+
+سپس برای قانون \lr{ S → aAA} تابع انتقال زیر را انجام می دهیم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, a, S) → (q\textsubscript{1}, AA)}
+\end{center}
+
+برای قانون \lr{ A → aS} تابع انتقال زیر را داریم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, a, A) → (q\textsubscript{1}, S)}
+\end{center}
+
+برای قانون \lr{ A → bS} تابع انتقال زیر را داریم:
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, b, S) → (q\textsubscript{1}, S)}
+\end{center}
+
+برای قانون \lr{ A → a} تابع انتقال زیر را داریم:
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, a, A) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+
+برای حالت های پذیرش نیزتابع انتقال زیر را خواهیم داشت:
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{f},z\textsubscript{0})}
+\end{center}
+که با حالت پایانی پذیرفته می شود
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+که با حالت پشته خالی پذیرفته می شود
+
+
+
+15. برای گرامر زیر یک ماشین پشته ای معادل طراحی کنید:
+\begin{center}
+	\lr{S → aAA}
+\end{center}
+\begin{center}
+	\lr{A → aS \textbar{} b}
+\end{center}
+
+حل: گرامر در فرم نرمال گریباخ می باشد.
+
+ابتدا علامت شروع که همان \lr{ S } است را درون پشته قرار می دهیم با استفاده از قانون زیر
+
+\begin{center}
+	\lr{ $\delta$(q\textsubscript{0}, $\epsilon$, z\textsubscript{0}) → (q\textsubscript{1}, Sz\textsubscript{0})}
+\end{center}
+
+سپس برای قانون \lr{ S → aAA} تابع انتقال زیر را انجام می دهیم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, a, S) → (q\textsubscript{1}, AA)}
+\end{center}
+
+برای قانون \lr{ A → aS} تابع انتقال زیر را داریم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, a, A) → (q\textsubscript{1}, S)}
+\end{center}
+
+برای قانون \lr{ A → b } تابع انتقال زیر را داریم:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, b, A) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+
+برای حالت های پذیرش نیز تابع انتقال زیر را خواهیم داشت:
+
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{f},z\textsubscript{0})}
+\end{center}
+که با حالت پایانی پذیرفته می شود
+\begin{center}
+	\lr{$\delta$(q\textsubscript{1}, $\lambda$, z\textsubscript{0}) → (q\textsubscript{1}, $\lambda$)}
+\end{center}
+که با حالت پشته خالی پذیرفته می شود
+
+
+
+16. ماشین پشته ای معادل با گرامر زیر طراحی کنید:
+
+\begin{center}
+	\lr{S → aBc}
+\end{center}
+\begin{center}
+	\lr{A → abc}
+\end{center}
+\begin{center}
+	\lr{B → aAb}
+\end{center}
+\begin{center}
+	\lr{C → AB}
+\end{center}
+\begin{center}
+	\lr{C → c}
+\end{center}
+
+گرامر در فرم نرمال گریباخ نمی باشد. با جایگزینی \lr{c} با \lr{C} و اضافه کردن قانون \lr{D → b} و جایگزینی \lr{b} با \lr{D} و همچنین جایگزینی \lr{A} از قانون \lr{ C → AB} با \lr{aDC} به فرم نرمال گریباخ تبدیل می شود. گرامر نهایی بصورت زیر می شود:
+
+\begin{center}
+	\lr{S → aBC}
+\end{center}
+\begin{center}
+	\lr{A → aDC}
+\end{center}
+\begin{center}
+	\lr{B → aAD}
+\end{center}
+\begin{center}
+	\lr{C → aDCB}
+\end{center}
+\begin{center}
+	\lr{C → c}
+\end{center}
+\begin{center}
+	\lr{D → b}
+\end{center}
+(حال به ماشین پشته ای معادل تبدیل کنید)
+
+17. ماشین پشته ای
+
+\begin{center}
+	\lr{P = (\{p, q\}, \{0, 1\}, (x, z\textsubscript{0}), $\delta$, q,z\textsubscript{0})}
+\end{center}
+
+را به فرم نرمال گریباخ تبدیل کنید اگر تابع انتقال بصورت زیر باشد:
+
+\begin{center}
+	\lr{$\delta$(q, 1, z\textsubscript{0}) → (q, xz\textsubscript{0})}
+\end{center}
+
+حل: ماشین پشته ای معادل دارای دو وضعیت \lr{p} و \lr{q} می باشد. پس دو قانون زیر نیز به گرامر اضافه می شوند:
+\begin{center}
+	\lr{S → (q z\textsubscript{0} q) \textbar{} (q z\textsubscript{0} p)}
+\end{center}
+
+برای تابع انتقال
+\lr{$\delta$(q, 1, z\textsubscript{0}) → (q, xz\textsubscript{0})}
+قوانین بصورت زیر خواهند بود:
+\begin{center}
+	\lr{$\delta$(q, 1, z\textsubscript{0}) → (q, xz\textsubscript{0})}
+\end{center}
+\begin{center}
+	\lr{(q z\textsubscript{0} q) → 1(q x q) ( q z\textsubscript{0} q)}
+\end{center}
+\begin{center}
+	\lr{(q z\textsubscript{0} q) → 1(q x p) ( p z\textsubscript{0} q)}
+\end{center}
+\begin{center}
+	\lr{(q z\textsubscript{0} q) → 1(q x q) ( q z\textsubscript{0} p)}
+\end{center}
+\begin{center}
+\lr{(q z\textsubscript{0} q) → 1(q x p) ( p z\textsubscript{0} p)}
+\end{center}
+
+\end{document}
